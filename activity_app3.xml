@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <!-- 返回按钮和时间 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:textColor="#2196F3"
+            android:textSize="16sp"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:17"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <!-- 主标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="手机号码验证"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 描述文本 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入您的有效电话号码。\n我们将向您发送 4 位代码以验证帐户。"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 国家代码和电话号码输入 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+86"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginEnd="16dp" />
+
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="电话号码"
+            android:background="@drawable/edittext_border"
+            android:padding="12dp"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <!-- 发送验证码按钮 -->
+    <Button
+        android:id="@+id/btnSendCode"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="发送验证码"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2196F3" />
+
+</LinearLayout>
